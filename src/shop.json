@@ -1,0 +1,26 @@
+[
+    {
+        "name": "crown",
+        "description": "👑 A crown only for the richest people in Rato.",
+        "ids": ["crown", "cr", "cown"],
+        "sale": true,
+        "price": 1000000,
+        "usable": true
+    },
+    {
+        "name": "banknote",
+        "description": "💴 A banknote. Used to expand your bank storage.",
+        "ids": ["bn", "banknot", "bank_note"],
+        "sale": false,
+        "price": 10,
+        "usable": true
+    },
+    {
+        "name": "apple",
+        "description": "🍎 Use the apple to powerup your multiplier.",
+        "ids": ["apple", "le", "app", "gapple"],
+        "sale": true,
+        "price": 50000,
+        "usable": true
+    }
+]

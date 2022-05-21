@@ -1,0 +1,25 @@
+[
+    {
+        "messageId": "969538853683736588",
+        "channelId": "960075110000238642",
+        "guildId": "958151739037614121",
+        "startAt": 1651226472020,
+        "endAt": 1651226496099,
+        "ended": true,
+        "winnerCount": 10,
+        "prize": "Testing",
+        "messages": {
+            "giveaway": "🎉🎉 **GIVEAWAY** 🎉🎉",
+            "giveawayEnded": "🎉🎉 **GIVEAWAY ENDED** 🎉🎉",
+            "inviteToParticipate": "React with 🎉 to participate!",
+            "winMessage": "Congratulations, {winners}! You won **{this.prize}**!\n{this.messageURL}",
+            "drawing": "Drawing: {timestamp}",
+            "dropMessage": "Be the first to react with 🎉 !",
+            "embedFooter": "{this.winnerCount} winner(s)",
+            "noWinner": "Giveaway cancelled, no valid participations.",
+            "winners": "Winner(s):",
+            "endedAt": "Ended at",
+            "hostedBy": "Hosted by: {this.hostedBy}"
+        }
+    }
+]

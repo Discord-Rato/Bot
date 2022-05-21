@@ -1,0 +1,61 @@
+{
+    "name": "ratobot",
+    "version": "2.0.0",
+    "main": "app.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node ./src/bot.js",
+        "start:dev": "nodemon ./app.js --dev",
+        "code:prettier": "prettier --write .",
+        "code:check": "prettier --check \"src/**/*.js\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Discord-Rato/Rato.git"
+    },
+    "dependencies": {
+        "@discordjs/opus": "^0.7.0",
+        "@discordjs/voice": "^0.9.0",
+        "@distube/soundcloud": "^1.1.0",
+        "@distube/spotify": "^1.2.1",
+        "@distube/yt-dlp": "^1.0.2",
+        "@vitalets/google-translate-api": "^8.0.0",
+        "body-parser": "^1.20.0",
+        "colors": "1.4.0",
+        "cookies": "^0.8.0",
+        "disco-oauth": "^5.1.1",
+        "discord-giveaways": "^5.1.1",
+        "discord-modals": "^1.3.5",
+        "discord-tictactoe": "^3.0.0",
+        "discord-timestamps": "^0.1.4",
+        "discord-together": "^1.3.3",
+        "discord.js": "^13.7.0",
+        "discord.js-akinator": "^3.4.3",
+        "distube": "^3.3.4",
+        "ejs": "^3.1.7",
+        "enmap": "^5.9.0",
+        "express": "^4.17.3",
+        "ffmpeg-static": "^5.0.0",
+        "figlet": "^1.5.2",
+        "imdb-api": "^4.4.1",
+        "method-override": "^3.0.0",
+        "module-alias": "^2.2.2",
+        "mongoose": "^6.3.3",
+        "ms": "^2.1.3",
+        "prompt": "^1.3.0",
+        "prompts": "^2.4.2",
+        "quickchart-js": "^3.0.1",
+        "random-words": "^1.1.2",
+        "reconlx": "^2.5.6",
+        "statcord.js": "^3.4.2",
+        "tailwindcss": "^3.0.24",
+        "to-zalgo": "^1.0.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.14.0",
+        "nodemon": "^2.0.15"
+    },
+    "_moduleAliases": {
+        "@root": "."
+    }
+}
