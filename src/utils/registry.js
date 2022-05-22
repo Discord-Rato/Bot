@@ -20,6 +20,25 @@ async function registerCommands(client, dir = "") {
     }
 }
 
+function getAllCommands(client, category) {
+    if (!client.arrayOfCmds)
+        throw TypeError(`There are no slash commands available.`);
+    let searchForCategory = false;
+
+    if (category) searchForCategory = true;
+    if (searchForCategory) {
+        const commands = client.arrayOfCmds.filter(
+            (cmd) => cmd.category?.toLowerCase() === category?.toLowerCase()
+        );
+
+        return commands;
+    } else if (!searchForCategory) {
+        if (!client.arrayOfCmds)
+            throw TypeError(`There are no slash commands available.`);
+        return client.arrayOfCmds;
+    }
+}
+
 async function registerEvents(client, dir = "") {
     const filePath = path.join(__dirname, dir);
     const files = await fs.readdir(filePath);
@@ -40,4 +59,5 @@ async function registerEvents(client, dir = "") {
 module.exports = {
     registerCommands,
     registerEvents,
+    getAllCommands,
 };

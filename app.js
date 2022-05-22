@@ -202,5 +202,5 @@ async function start() {
         require("./src/bot");
     }
 
-    require(`./src/api/server`);
+    require(`./src/website/server`);
 }

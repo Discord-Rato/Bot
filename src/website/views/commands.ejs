@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rato | Commands</title>
+        <meta
+          name="keywords"
+          content="discord bots, discord bot maker, discord bot commands, discord bot builder, discord bot js, Rato, discord bot list, discord.js, discord bot, MEE6"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://kit.fontawesome.com/36fb5d2ceb.js" crossorigin="anonymous"></script>
+        <script async src="https://arc.io/widget.min.js#XgWseQde"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="https://cdn.discordapp.com/avatars/825276449454817280/59204205e89b6137e5fc9cbd40ee1dd4.webp" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/tailwind.css" />
+        <link rel="stylesheet" href="css/utils.css" />
+        <link rel="stylesheet" href="css/commands.css" />
+        <link rel="stylesheet" href="css/animations.css" />
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/958952387660378162/967618640847454208/discord-avatar-512-YKMOM.png">
+    </head>
+    <body class="bg-[#1b1e29] text-white">
+        <%- include("core/navbar.ejs") %>
+        
+
+        <div class="container">
+            <header class="container slide-up-fade-in">
+                <div class="jumbotron text-center">
+                  <img
+                    src="https://cdn.discordapp.com/attachments/958952387660378162/974873804805373962/20210801_154524.png"
+                    alt="Rato Discord Bot"
+                    class="float robot mx-auto"
+                  />
+                  <h1 class="text-lg">
+                    <span class="font-bold">View all Rato bot's Slash Commands.</span>
+                  </h1>
+                  <p>Economy, Music, Social, Utility.</p>
+                  <hr class="m-4 w-50 mx-auto">
+                </div>
+              </header>
+
+              
+        <div class="container px-lg-5 slide-up-fade-in mt-50 m-3" id="commands_menu">
+            <div class="row">
+              <div class="col-sm-3" id="category">
+                <div class="list-group" id="myList" role="tablist">
+                  <% categories.forEach((category, i) => { %>
+                    <a class="list-group-item list-group-item-action <%= i==0 ? 'active' : '' %>"  data-bs-toggle="list" href="#<%= category.name?.toLowerCase() %>" role="tab" aria-controls="<%= category.name?.toLowerCase() %>"><%= category.name %></a>
+                  <% }) %>
+                </div>
+              </div>
+            <div class="col-sm-9">
+              <div class="tab-content">
+                <% categories.forEach((category, k) => { %>
+                    <div class="tab-pane fade show <%= k == 0 ? 'active' : '' %>" id="<%= category.name?.toLowerCase() %>" role="tabpanel" aria-labelledby="list-home-list">
+                      <div class="accordion" id="acc_<%= category.name?.toLowerCase() %>">
+                        <% commands.filter((cmd) => cmd.category?.toLowerCase() === category.name?.toLowerCase()).forEach((cmd, i) => { %>
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="h_<%= cmd.name %>">
+                              <button class="accordion-button <%= i==0 ? '' : 'collapsed' %>" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#c_<%= cmd.name %>" 
+                                aria-expanded="<%= i==0 ? 'true' : 'false' %>"
+                                aria-controls="<%= cmd.name %>"
+                              >
+                                <%= cmd.name %>
+                              </button>
+                            </h2>
+                            <div id="c_<%= cmd.name %>" 
+                              class="accordion-collapse collapse <%= i==0 ? 'show' : ''%>" 
+                              aria-labelledby="h_<%= cmd.name %>" 
+                              data-bs-parent="#acc_<%= category.name?.toLowerCase() %>">
+                              <div class="accordion-body">
+                              <code>Description : </code><%= cmd.description %> <br>
+                              <code>Usage : </code><small><kbd><%= cmd.usage %></kbd></small><br>
+                              </div>
+                            </div>
+                          </div>
+                        <% }) %>
+                      </div>
+                    </div>
+                <% }) %>
+              </div>
+            </div>
+          </div>
+          </div>
+        </section>
+        </div>
+
+        <script src="js/commands.js" defer></script>
+    </body>
+</html>

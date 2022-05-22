@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rato | The Discord Bot</title>
+        <meta
+          name="keywords"
+          content="discord bots, discord bot maker, discord bot commands, discord bot builder, discord bot js, Rato, discord bot list, discord.js, discord bot, MEE6"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="https://cdn.discordapp.com/avatars/825276449454817280/59204205e89b6137e5fc9cbd40ee1dd4.webp"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/tailwind.css" />
+        <link rel="stylesheet" href="css/utils.css" />
+        <link rel="stylesheet" href="css/animations.css" />
+        <script
+            src="https://kit.fontawesome.com/36fb5d2ceb.js"
+            crossorigin="anonymous"
+        ></script>
+        <script async src="https://arc.io/widget.min.js#XgWseQde"></script>
+
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/958952387660378162/967618640847454208/discord-avatar-512-YKMOM.png">
+    </head>
+    <body class="bg-[#1b1e29] text-white">
+        <%- include("core/navbar.ejs") %>
+
+        <header class="container">
+            <div class="jumbotron text-center">
+              <img
+                src="https://cdn.discordapp.com/attachments/958952387660378162/974873804805373962/20210801_154524.png"
+                alt="Rato Discord Bot"
+                class="float robot mx-auto"
+              />
+              <h1 class="text-lg">
+                <span class="font-bold">Lightweight, powerful</span>
+                <span class="text-cyan-400"> Discord Bot</span> for all servers.
+              </h1>
+              <p>Economy, Music, Social, Utility.</p>
+              <p class="lead mx-auto inline">
+                <a
+                  class="btn btn-primary border-none bg-indigo-400 mt-2 rounded hover hover:shadow-lg hover:bg-indigo-500 transition ease-in-out"
+                  href="/invite"
+                  >Add To Discord</a
+                >
+                <a
+                  class="btn btn-primary bg-gray-500 border-none mt-2 ml-1 rounded hover hover:shadow-lg hover:bg-white/50 transition ease-in-out"
+                  href="/support"
+                  >Support Server</a
+                >
+              </p>
+            </div>
+          </header>
+          
+          <!-- Section 1 -->
+          <section class="py-20 mt-[36vh]">
+            <div class="container max-w-6xl mx-auto">
+              <h2 class="text-4xl font-bold tracking-tight text-center">Our Features</h2>
+              <p class="mt-2 text-lg text-center text-gray-600">
+                Check out our list of awesome features below.
+              </p>
+              <div
+                class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0"
+              >
+                <div
+                  class="hover:cursor-pointer hover:-translate-y-1 transition ease-in-out hover:bg-[#1e2028] relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-[#232633] sm:rounded-xl"
+                >
+                  <div class="p-3 bg-blue-500 rounded-full">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="Outline"
+                      viewBox="0 0 24 24"
+                      class="w-8 h-8"
+                      fill="#FFFFFF"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M19,0H14a1,1,0,0,0,0,2h5a2.951,2.951,0,0,1,1.285.3L.293,22.293a1,1,0,1,0,1.414,1.414L21.7,3.715A2.951,2.951,0,0,1,22,5v5a1,1,0,0,0,2,0V5A5.006,5.006,0,0,0,19,0Z"
+                      />
+                      <path
+                        d="M6,10A4,4,0,1,0,2,6,4,4,0,0,0,6,10ZM6,4A2,2,0,1,1,4,6,2,2,0,0,1,6,4Z"
+                      />
+                      <path
+                        d="M18,14a4,4,0,1,0,4,4A4,4,0,0,0,18,14Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,18,20Z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="text-xl text-white font-bold">Economy</h4>
+                  <p class="text-base text-center text-white/50">
+                    Have fun earning cash, and gift friends money but also have a great
+                    time racing to the top of the leaderboard.
+                  </p>
+                </div>
+          
+                <div
+                  class="hover:cursor-pointer hover:-translate-y-1 transition ease-in-out hover:bg-[#1e2028] flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-[#232633] sm:rounded-xl"
+                >
+                  <div class="p-3 rounded-circle bg-blue-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="Layer_1"
+                      class="w-8 h-8"
+                      fill="#FFFFFF"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      data-name="Layer 1"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8.7,18H3c-1.493,0-3-1.134-3-3.666V9.294A9.418,9.418,0,0,1,8.349.023a9,9,0,0,1,9.628,9.628A9.419,9.419,0,0,1,8.7,18ZM20,9.08h-.012c0,.237,0,.474-.012.712C19.59,15.2,14.647,19.778,9.084,19.981l0,.015A8,8,0,0,0,16,24h5a3,3,0,0,0,3-3V16A8,8,0,0,0,20,9.08Z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="text-xl text-white font-bold">Social</h4>
+                  <p class="text-base text-center text-white/50">
+                    Enagage with other people in your community, follow users, block users,
+                    profile customization.
+                  </p>
+                </div>
+          
+                <div
+                  class="hover:cursor-pointer hover:-translate-y-1 transition ease-in-out hover:bg-[#1e2028] flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-[#232633] sm:rounded-xl"
+                >
+                  <div class="p-3 bg-blue-500 rounded-full">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      class="w-8 h-8"
+                      version="1.1"
+                      id="Capa_1"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                      fill="#FFFFFF"
+                    >
+                      <g>
+                        <path
+                          d="M34.283,384c17.646,30.626,56.779,41.148,87.405,23.502c0.021-0.012,0.041-0.024,0.062-0.036l9.493-5.483   c17.92,15.332,38.518,27.222,60.757,35.072V448c0,35.346,28.654,64,64,64s64-28.654,64-64v-10.944   c22.242-7.863,42.841-19.767,60.757-35.115l9.536,5.504c30.633,17.673,69.794,7.167,87.467-23.467   c17.673-30.633,7.167-69.794-23.467-87.467l0,0l-9.472-5.461c4.264-23.201,4.264-46.985,0-70.187l9.472-5.461   c30.633-17.673,41.14-56.833,23.467-87.467c-17.673-30.633-56.833-41.14-87.467-23.467l-9.493,5.483   C362.862,94.638,342.25,82.77,320,74.944V64c0-35.346-28.654-64-64-64s-64,28.654-64,64v10.944   c-22.242,7.863-42.841,19.767-60.757,35.115l-9.536-5.525C91.073,86.86,51.913,97.367,34.24,128s-7.167,69.794,23.467,87.467l0,0   l9.472,5.461c-4.264,23.201-4.264,46.985,0,70.187l-9.472,5.461C27.158,314.296,16.686,353.38,34.283,384z M256,170.667   c47.128,0,85.333,38.205,85.333,85.333S303.128,341.333,256,341.333S170.667,303.128,170.667,256S208.872,170.667,256,170.667z"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                  <h4 class="text-xl text-white font-bold">Utility</h4>
+                  <p class="text-base text-center text-white/50">
+                    A variety of High-quality tools that you can use to improve your
+                    Discord-Server.
+                  </p>
+                </div>
+          
+                <div
+                  class="hover:cursor-pointer hover:-translate-y-1 transition ease-in-out hover:bg-[#1e2028] flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-[#232633] sm:rounded-xl"
+                >
+                  <div class="p-3 bg-blue-500 rounded-full">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="Filled"
+                      viewBox="0 0 24 24"
+                      fill="#FFFFFF"
+                      class="w-8 h-8"
+                    >
+                      <path
+                        d="M20.492,7.969,10.954.975A5,5,0,0,0,3,5.005V19a4.994,4.994,0,0,0,7.954,4.03l9.538-6.994a5,5,0,0,0,0-8.062Z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 class="text-xl text-white font-bold">Music</h4>
+                  <p class="text-base text-center text-white/50">
+                    Join a Voice-Channel, and play some awesome music.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Section 1 -->
+          <section class="flex items-center justify-center py-20 min-w-screen">
+            <div class="px-16">
+              <div class="container flex flex-col items-start mx-auto lg:items-center">
+                <p
+                  class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center"
+                >
+                  Don't just take our word for it
+                </p>
+          
+                <h2
+                  class="relative flex items-start justify-start w-full max-w-3xl text-5xl font-bold lg:justify-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="absolute right-0 hidden w-12 h-12 -mt-2 -mr-16 text-gray-200 lg:inline-block"
+                    viewBox="0 0 975.036 975.036"
+                  >
+                    <path
+                      d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"
+                    ></path>
+                  </svg>
+                  See what others are saying
+                </h2>
+                <div
+                  class="block w-full h-0.5 max-w-lg mt-6 bg-purple-100 rounded-full"
+                ></div>
+          
+                <div class="items-center justify-center w-full mt-12 mb-4 lg:flex">
+                  <div
+                    class="flex flex-col items-start justify-start w-full h-auto mb-12 lg:w-1/3 lg:mb-0 rounded px-8 py-4 hover:cursor-pointer hover:-translate-y-1 transition ease-in-out hover:bg-[#1e2028] bg-[#232633]"
+                  >
+                    <div class="flex items-center justify-center">
+                      <div
+                        class="w-16 h-16 mr-4 overflow-hidden bg-gray-200 rounded-full"
+                      >
+                        <img
+                          src="https://cdn.discordapp.com/attachments/956812090180513822/974895066961305661/channels4_profile.jpg"
+                          class="object-cover w-full h-full sm:w-full sm:h-full"
+                        />
+                      </div>
+                      <div class="flex flex-col items-start justify-center">
+                        <h4 class="font-bold text-white">
+                          Hayden Aka <span class="text-indigo-200">Unbreakablenight</span>
+                        </h4>
+                        <p class="text-white/50">
+                          Developer <span class="text-yellow-500">&</span> Founder
+                        </p>
+                      </div>
+                    </div>
+                    <blockquote class="mt-8 text-lg text-gray-500">
+                      "I loved coding this Bot, and going through all the difficulties and
+                      fixing them, generally making this project was really a wonderful
+                      experience."
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section
+            class="py-8 leading-7 bg-[#1e2028] text-white sm:py-12 md:py-16 lg:py-24 mt-24"
+          >
+            <div class="max-w-6xl px-4 px-10 mx-auto border-solid lg:px-12">
+              <div
+                class="flex flex-col items-start leading-7 text-white border-0 border-gray-200 lg:items-center lg:flex-row"
+              >
+                <div class="box-border flex-1 text-center border-solid sm:text-left">
+                  <h2
+                    class="inline m-0 text-4xl font-semibold leading-tight tracking-tight text-left text-white border-0 border-gray-200 sm:text-5xl"
+                  >
+                    <span class="inline">Boost Your Server </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      version="1.1"
+                      id="Layer_1"
+                      fill="#FFFFFF"
+                      class="inline w-8 h-8"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <path
+                        d="M11.815,289.919c-11.596-17.06-13.914-38.781-6.179-57.904c17.287-35.265,46.246-63.459,81.961-79.795  c25.858-12.859,53.867-20.834,82.619-23.527c-12.528,15.416-25.07,31.864-37.626,49.347c-25.554,38.696-47.428,79.7-65.335,122.475  l-7.708,17.284C40.239,316.201,22.691,305.952,11.815,289.919z M41.181,379.609c-18.448,25.473-31.689,54.335-38.963,84.934  c-4.535,19.882,7.906,39.677,27.789,44.212c5.411,1.234,11.03,1.233,16.441-0.004c30.552-7.286,59.369-20.518,84.807-38.942l0,0  c24.908-24.896,24.918-65.271,0.021-90.179c-24.896-24.908-65.271-24.918-90.179-0.021H41.181z M209.711,442.885l-17.411,7.729  v6.243c0.042,14.955,6.031,29.279,16.647,39.813c10.098,9.821,23.625,15.32,37.711,15.331  c50.047-0.722,90.625-46.289,111.922-88.713c13.047-26.256,21.049-54.727,23.59-83.936c-15.571,12.74-32.268,25.48-50.09,38.22  c-38.681,25.561-79.679,47.428-122.454,65.314H209.711z M510.802,62.827c-2.824,92.429-69.37,184.094-203.459,280.282  c-36.49,23.654-74.985,44.06-115.043,60.983v-11.954c-0.198-40.962-33.355-74.12-74.317-74.317h-11.954  c16.962-40.059,37.403-78.554,61.089-115.043C263.071,69.006,354.587,2.375,446.868-0.64  C492.859-0.64,510.802,18.088,510.802,62.827z M383.401,179.802c0-29.317-23.766-53.084-53.084-53.084s-53.084,23.766-53.084,53.084  c0,29.317,23.766,53.084,53.084,53.084S383.401,209.119,383.401,179.802z"
+                      />
+                    </svg>
+                  </h2>
+                  <p
+                    class="mt-2 text-xl text-left text-white/50 border-0 border-gray-200 sm:text-2xl"
+                  >
+                    Our bot will help make your server refreshingly, amazing!
+                  </p>
+                </div>
+                <a
+                  href="/invite"
+                  class="transition ease-in-out hover:shadow-1xl inline-flex items-center justify-center w-full px-5 py-4 mt-6 ml-0 font-sans text-base leading-none text-white no-underline bg-indigo-600 border border-indigo-600 border-solid rounded cursor-pointer md:w-auto lg:mt-0 hover:bg-indigo-700 hover:border-indigo-700 hover:text-white focus-within:bg-indigo-700 focus-within:border-indigo-700 focus-within:text-white sm:text-lg lg:ml-6 md:text-xl"
+                >
+                  Add To Discord
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5 ml-2"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+          
+    </body>
+</html>

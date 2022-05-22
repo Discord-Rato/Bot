@@ -26,19 +26,9 @@ module.exports.updateUser = async (req, res, next) => {
 
 module.exports.validateGuild = async (req, res, next) => {
     res.locals.guild = res.locals.guilds.find((g) => g.id === req.params.id);
-    return res.locals.guild
-        ? next()
-        : res
-              .status(404)
-              .send(
-                  `Sorry, but it seems like the page you we're looking for doesnt exists.\n\nMake sure you've typed the address correctly or this page your looking for may have been moved to a different address.`
-              );
+    return res.locals.guild ? next() : res.status(404);
 };
 
 module.exports.validateUser = async (req, res, next) => {
-    return res.locals.user
-        ? next()
-        : res
-              .status(401)
-              .send(`You are unauthorized, you need to be logged in first.`);
+    return res.locals.user ? next() : res.status(401);
 };

@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background-primary: #36393f;
+    --background-secondary: #2f3136;
+}
+
+body {
+    color: transparent;
+    background: var(--background-primary);
+    height: 100vh;
+}
+
+.robot {
+    max-width: 192px;
+    margin-bottom: 5px;
+}
+
+p:not(.lead) {
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.jumbotron {
+    background: none;
+    text-align: center;
+    margin-top: 15vh;
+}

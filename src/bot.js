@@ -7,7 +7,11 @@ const {
     MessageActionRow,
     MessageButton,
 } = require("discord.js");
-const { registerCommands, registerEvents } = require("./utils/registry");
+const {
+    registerCommands,
+    registerEvents,
+    getAllCommands,
+} = require("./utils/registry");
 const { GiveawaysManager } = require("discord-giveaways");
 const config = require("../config.json");
 const client = new Client({ intents: 98303 });
