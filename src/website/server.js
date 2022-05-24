@@ -8,6 +8,7 @@ const middleware = require("./modules/performance/middleware");
 const dashboardRoutes = require("./routes/dashboard-routes");
 const rootRoutes = require("./routes/root-routes");
 const authRoutes = require("./routes/auth-routes");
+const discoveryRoutes = require("./routes/discovery-routes");
 
 const app = express();
 
@@ -20,6 +21,10 @@ app.use(cookies.express("a", "b", "c"));
 
 app.use(express.static(`${__dirname}/assets`));
 app.locals.basedir = `${__dirname}/assets`;
+
+app.use(`/discovery`,
+    middleware.updateUser, discoveryRoutes
+)
 
 app.use("/",
     middleware.updateUser, rootRoutes,

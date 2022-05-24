@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rato | Discovery</title>
+        <meta
+          name="keywords"
+          content="discord bots, discord bot maker, discord bot commands, discord bot builder, discord bot js, Rato, discord bot list, discord.js, discord bot, MEE6"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="https://cdn.discordapp.com/avatars/825276449454817280/59204205e89b6137e5fc9cbd40ee1dd4.webp"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/tailwind.css" />
+        <link rel="stylesheet" href="/css/utils.css" />
+        <link rel="stylesheet" href="/css/animations.css" />
+        <script
+            src="https://kit.fontawesome.com/36fb5d2ceb.js"
+            crossorigin="anonymous"
+        ></script>
+        <script async src="https://arc.io/widget.min.js#XgWseQde"></script>
+
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/958952387660378162/967618640847454208/discord-avatar-512-YKMOM.png">
+    </head>
+    <body class="bg-[#1b1e29] text-white">
+            <nav
+            class="navbar navbar-dark navbar-expand-md rounded mx-auto slide-up-fade-in bg-[#232633] w-[90%] mt-[1vh]"
+            id="navbar"
+        >
+            <div class="container-fluid">
+            <a
+                class="navbar-brand justify-content-center mx-auto pl-2 rounded-circle"
+                href="/"
+                data-v-2080cbe8=""
+                ><img
+                class="logo rounded-circle"
+                src="https://cdn.discordapp.com/attachments/958952387660378162/974873804805373962/20210801_154524.png"
+                alt="logo"
+                width="42"
+                height="42" /></a
+            ><button
+                class="navbar-toggler collaspsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+                class="collapse navbar-collapse justify-content-end"
+                id="navbarSupportedContent"
+                >
+                <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/commands">Commands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/discovery">Discovery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/docs">Documention</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/plus">Plus <i class="fas fa-crown"></i></a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+        <div class="container slide-up-fade-in">
+            <div class="row">
+                <div class="col-sm-6 mt-5">
+                    <div class="discovery-card discovery-card-bordered profileTab__card">
+                        <div class="discovery-card-cover">
+                            <div class="cover-image" style='background: rgba(0, 0, 0, 0) url("<%= guild.banner || "https://theme.zdassets.com/theme_assets/678183/b7e9dce75f9edb23504e13b4699e208f204e5015.png" %>") repeat scroll 0% 0%;'></div>
+                        </div>
+                        <div class="discovery-card-body" ::before>
+                            <div class="discovery-row discovery-row-space-between discovery-row-middle profileHeader profile-header-row">
+                                <div class="discovery-row discovery-row-space-between profile-header-avatar p-2">
+                                    <div style="position: relative;">
+                                        <span class="discovery-avatar avatar-circle discovery-avatar-image" style="height: 92px; width: 92px; font-size: 92px;">
+                                            <img src="<%= guild.iconURL({ dynamic: false }) %>" style="height: 100%; width: 100%;">
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col col-xs-24">
+                                    <div class="row row-space-between">
+                                        <div class="col profileHeader__username">
+                                            <h1 class="discovery-typography discovery-typography-ellipsis discovery-typography-ellipsis-single-line profileHeader--discoverytag">
+                                                <%= guild.name %>
+                                            </h1>
+                                        </div>
+                                        <div class="row profileHeader__socialStats justify-between flex ">
+                                            <div class="col">
+                                                <article class="shroom-typography">
+                                                    <span class="profileHeader__socialStatsCount font-bold text-white"><%= guild.memberCount?.toLocaleString() %></span> Members
+                                                </article>
+                                            </div>
+                                            <div class="col">
+                                                <span class="profileHeader__socialStatsCountWrapper">
+                                                    <article class="shroom-typography">
+                                                        <span>
+                                                            <span class="profileHeader__socialStatsCount font-bold text-white"><%= guild.members.cache.filter((m) => !m.user.bot).size?.toLocaleString() %></span> Humans
+                                                        </span>
+                                                    </article>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <span class="profileHeader__socialStatsCountWrapper">
+                                                    <article class="shroom-typography">
+                                                        <span>
+                                                            <span class="profileHeader__socialStatsCount font-bold text-white"><%= guild.members.cache.filter((m) => m.user.bot).size?.toLocaleString() %></span> Bots
+                                                        </span>
+                                                    </article>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="profileHeader__bio">
+                                            <span class="Linkify">
+                                                <%= guild.description || "No Guild Description" %>
+                                            </span>
+                                        </div>
+                                        <a
+                                            class="btn btn-primary border-none bg-red-400 mt-2 rounded hover hover:shadow-lg hover:bg-red-500 transition ease-in-out"
+                                            href="/discovery/guilds/<%= guild.id %>/join"
+                                            >Join Server</a>
+                                        <button
+                                            class="btn btn-primary border-none bg-indigo-400 mt-2 rounded hover hover:shadow-lg hover:bg-indigo-500 transition ease-in-out"
+                                            href="/discovery/guilds/<%= guild.id %>/upvote?_method=POST"
+                                            id="upvote_button"
+                                            method="POST"
+                                            >Upvote</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
